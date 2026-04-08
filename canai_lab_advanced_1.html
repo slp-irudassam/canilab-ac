@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>캔아이랩 심화반 2기 모집</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #EDEAE2; font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; }
+  .lp { width: 100%; max-width: 480px; margin: 0 auto; background: #F5F2EC; padding-bottom: 2rem; }
+
+  .hero { background: #2B3467; padding: 2.5rem 1.5rem 2rem; text-align: center; }
+  .hero-accent { width: 48px; height: 4px; background: #72C6C8; border-radius: 2px; margin: 0 auto 1rem; }
+  .hero-badge { display: inline-block; background: rgba(114,198,200,0.2); color: #A8E6E7; font-size: 12px; padding: 4px 14px; border-radius: 20px; margin-bottom: 1rem; border: 1px solid rgba(114,198,200,0.4); }
+  .hero-title { font-size: 24px; font-weight: 800; color: #fff; line-height: 1.35; margin-bottom: 0.5rem; }
+  .hero-title .teal { color: #72C6C8; }
+  .hero-sub { font-size: 13px; color: #B8C4D4; line-height: 1.7; margin-bottom: 1.5rem; }
+  .hero-price-wrap { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; border: 1px solid rgba(255,255,255,0.12); }
+  .hero-orig { font-size: 13px; color: #8899AA; text-decoration: line-through; margin-bottom: 4px; }
+  .hero-discount { display: inline-block; background: #E05470; color: #fff; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin-bottom: 8px; }
+  .hero-final { font-size: 38px; font-weight: 900; color: #F5C842; }
+  .hero-final span { font-size: 16px; font-weight: 600; color: #D4B84A; margin-left: 2px; }
+  .hero-cta { background: #72C6C8; color: #1A2A3A; font-size: 15px; font-weight: 700; padding: 14px; border-radius: 10px; width: 100%; border: none; cursor: pointer; display: block; }
+  .hero-cta:hover { background: #5BB4B6; }
+
+  .sec { padding: 1.75rem 1.25rem; }
+  .sec-title { font-size: 18px; font-weight: 800; color: #2B3467; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px; }
+  .sec-title::before { content: ""; display: block; width: 4px; height: 20px; background: #72C6C8; border-radius: 2px; flex-shrink: 0; }
+  .divider { border: none; border-top: 1px solid #DDD8CE; }
+
+  .pain-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; background: #fff; border-radius: 10px; margin-bottom: 8px; border: 1px solid #E8E3DA; }
+  .pain-num { width: 26px; height: 26px; border-radius: 50%; background: #2B3467; color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .pain-text { font-size: 13px; color: #3A3A3A; line-height: 1.55; }
+  .pain-text strong { color: #2B3467; font-weight: 700; }
+
+  .highlight { background: #2B3467; border-radius: 12px; padding: 1.25rem; text-align: center; margin-bottom: 1rem; }
+  .hl-label { font-size: 11px; color: #72C6C8; font-weight: 600; margin-bottom: 6px; }
+  .hl-main { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.5; margin-bottom: 6px; }
+  .hl-sub { font-size: 12px; color: #B8C4D4; line-height: 1.6; }
+
+  .curri-card { border-radius: 12px; overflow: hidden; margin-bottom: 10px; border: 1px solid #DDD8CE; }
+  .curri-head { background: #2B3467; padding: 10px 16px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .curri-badge { font-size: 11px; color: #2B3467; background: #72C6C8; padding: 2px 10px; border-radius: 20px; font-weight: 700; }
+  .curri-title { font-size: 14px; font-weight: 700; color: #fff; flex: 1; }
+  .curri-date { font-size: 11px; color: #A8E6E7; }
+  .curri-body { background: #fff; padding: 12px 16px; }
+  .curri-item { font-size: 13px; color: #4A4A4A; padding: 4px 0; display: flex; gap: 8px; line-height: 1.5; }
+  .curri-dot { color: #72C6C8; font-weight: 800; flex-shrink: 0; }
+
+  .benefit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .benefit-card { background: #fff; border: 1px solid #E8E3DA; border-radius: 12px; padding: 1rem; text-align: center; }
+  .b-icon { font-size: 22px; margin-bottom: 6px; }
+  .b-title { font-size: 13px; font-weight: 700; color: #2B3467; margin-bottom: 3px; }
+  .b-desc { font-size: 11px; color: #777; line-height: 1.4; }
+  .benefit-wide { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; text-align: left; padding: 1rem 1.25rem; }
+  .benefit-wide .b-icon { font-size: 26px; margin: 0; flex-shrink: 0; }
+
+  .notice-wrap { background: #EEF3F8; border-radius: 10px; padding: 1rem 1.25rem; border-left: 4px solid #2B3467; }
+  .notice-item { font-size: 13px; color: #3A3A3A; display: flex; gap: 8px; margin-bottom: 7px; line-height: 1.55; }
+  .notice-item:last-child { margin-bottom: 0; }
+  .ni-icon { color: #E05470; font-weight: 700; flex-shrink: 0; }
+
+  .price-sec { background: #2B3467; border-radius: 14px; padding: 1.5rem; }
+  .price-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .price-row:last-child { border-bottom: none; }
+  .price-label { font-size: 13px; color: #B8C4D4; }
+  .price-val { font-size: 13px; font-weight: 600; color: #fff; }
+  .price-val.cross { text-decoration: line-through; color: #667788; }
+  .price-val.teal { color: #72C6C8; }
+  .price-final-row { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.2); }
+  .pf-label { font-size: 14px; font-weight: 700; color: #fff; }
+  .pf-val { font-size: 30px; font-weight: 900; color: #F5C842; }
+
+  .cta-wrap { padding: 0 1.25rem 0.5rem; }
+  .cta-main { background: #2B3467; color: #fff; font-size: 15px; font-weight: 700; padding: 15px; border-radius: 12px; width: 100%; border: none; cursor: pointer; display: block; margin-bottom: 8px; }
+  .cta-main:hover { background: #1E2650; }
+  .cta-sub { text-align: center; font-size: 12px; color: #888; margin-top: 6px; }
+
+  .tag { display: inline-block; background: #E8F7F7; color: #2B8A8C; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin: 0 4px 6px 0; border: 1px solid #B8E6E7; }
+  .tag.navy { background: #E8ECF5; color: #2B3467; border-color: #C0C8DC; }
+</style>
+</head>
+<body>
+<div class="lp">
+
+  <div class="hero">
+    <div class="hero-accent"></div>
+    <div class="hero-badge">캔아이랩 심화반 2기 모집</div>
+    <div class="hero-title">캔바 + AI로<br><span class="teal">나만의 책</span>을 출판하세요</div>
+    <div class="hero-sub">전자책부터 알라딘·yes24·교보문고에 판매되는<br>POD 종이책까지 — 2주 안에 완성!</div>
+    <div class="hero-price-wrap">
+      <div class="hero-orig">정상가 200,000원</div>
+      <div class="hero-discount">얼리버드 45% OFF · 4/12 자정까지</div>
+      <div class="hero-final">160,000<span>원~</span></div>
+    </div>
+    <a href="https://slp_irudassam.com" style="text-decoration:none;">
+      <button class="hero-cta">지금 신청하기 →</button>
+    </a>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">이런 고민 있으셨나요?</div>
+    <div class="pain-item"><div class="pain-num">1</div><div class="pain-text"><strong>책을 꼭 내고 싶었는데</strong> 혼자 시작하기가 막막했던 분</div></div>
+    <div class="pain-item"><div class="pain-num">2</div><div class="pain-text">내 전문성을 콘텐츠로 만들고 싶지만 <strong>어디서부터 시작해야 할지</strong> 모르는 분</div></div>
+    <div class="pain-item"><div class="pain-num">3</div><div class="pain-text">캔바·AI를 쓰고 싶은데 <strong>교구 제작에만 시간이 다 가는</strong> 분</div></div>
+    <div class="pain-item"><div class="pain-num">4</div><div class="pain-text">치료·교육 현장에서 <strong>바로 쓸 수 있는 나만의 교재</strong>를 갖고 싶은 분</div></div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="sec">
+    <div class="sec-title">2주 동안 무엇을 완성하나요?</div>
+    <div style="margin-bottom:1rem;">
+      <span class="tag navy">e-book</span>
+      <span class="tag navy">POD 종이책</span>
+      <span class="tag">알라딘 등록</span>
+      <span class="tag">yes24 등록</span>
+      <span class="tag">교보문고 등록</span>
+    </div>
+    <div style="font-size:13px; color:#4A4A4A; line-height:1.75; margin-bottom:1.25rem;">
+      단순히 파일을 만드는 게 아니에요.<br>
+      <strong style="color:#2B3467;">주제 선정 → 삽화 생성 → 편집 → 실제 출판 등록</strong>까지<br>전 과정을 함께 완성합니다.
+    </div>
+    <div class="highlight">
+      <div class="hl-label">이 강의만의 차별점</div>
+      <div class="hl-main">임상 23년 언어재활사가 직접 기획 방향을 잡아드려요</div>
+      <div class="hl-sub">단순 그림책 강의가 아닌, 치료·교육 현장에서 실제로 활용되는 방향으로 함께 고민합니다.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="sec">
+    <div class="sec-title">상세 커리큘럼</div>
+    <div class="curri-card">
+      <div class="curri-head">
+        <div class="curri-badge">사전 준비</div>
+        <div class="curri-title">단톡방 초대 및 안내</div>
+        <div class="curri-date">4/10~</div>
+      </div>
+      <div class="curri-body">
+        <div class="curri-item"><span class="curri-dot">·</span>모든 강의 녹화본 제공</div>
+        <div class="curri-item"><span class="curri-dot">·</span>수강 안내 및 준비사항 공유</div>
+      </div>
+    </div>
+    <div class="curri-card">
+      <div class="curri-head">
+        <div class="curri-badge">1주차</div>
+        <div class="curri-title">AI로 스토리 · 삽화 제작</div>
+        <div class="curri-date">4/17 저녁 9시</div>
+      </div>
+      <div class="curri-body">
+        <div class="curri-item"><span class="curri-dot">·</span>스토리 기획하는 방법</div>
+        <div class="curri-item"><span class="curri-dot">·</span>캔바와 AI로 삽화 생성 및 수정하는 법</div>
+        <div class="curri-item"><span class="curri-dot">·</span>테마별 이미지 생성 프롬프트 가이드 제공</div>
+      </div>
+    </div>
+    <div class="curri-card">
+      <div class="curri-head">
+        <div class="curri-badge">2주차</div>
+        <div class="curri-title">도서 등록하기</div>
+        <div class="curri-date">4/24 저녁 9시</div>
+      </div>
+      <div class="curri-body">
+        <div class="curri-item"><span class="curri-dot">·</span>캔바로 전자책 레이아웃 / POD 표지 만들기</div>
+        <div class="curri-item"><span class="curri-dot">·</span>ISBN 발급 및 도서 등록</div>
+        <div class="curri-item"><span class="curri-dot">·</span>표지 설정, 저자정보, 카테고리 선정 가이드 제공</div>
+        <div class="curri-item"><span class="curri-dot">·</span>녹화본 일시정지하며 천천히 따라할 수 있도록 상세 제공</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="sec">
+    <div class="sec-title">수강 혜택</div>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="b-icon">💬</div>
+        <div class="b-title">전용 단톡방</div>
+        <div class="b-desc">수강 기간 내내 상시 질문 가능</div>
+      </div>
+      <div class="benefit-card">
+        <div class="b-icon">🎬</div>
+        <div class="b-title">전강의 녹화본</div>
+        <div class="b-desc">놓친 강의도 반복 시청 가능</div>
+      </div>
+      <div class="benefit-card benefit-wide">
+        <div class="b-icon">🎁</div>
+        <div>
+          <div class="b-title">스토리 기획 프롬프트 가이드</div>
+          <div class="b-desc">테마별 이미지 생성 프롬프트 + 스토리 기획 가이드 제공</div>
+        </div>
+      </div>
+      <div class="benefit-card benefit-wide">
+        <div class="b-icon">👥</div>
+        <div>
+          <div class="b-title">함께 완성하는 강의</div>
+          <div class="b-desc">3주간 서로의 작업물을 나누며 현장에서 바로 쓸 수 있는 나만의 교재 완성!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="sec">
+    <div class="sec-title">수강 전 꼭 확인하세요</div>
+    <div class="notice-wrap">
+      <div class="notice-item"><span class="ni-icon">!</span>심화반은 캔바 기본 기능을 별도로 다루지 않아요.</div>
+      <div class="notice-item"><span class="ni-icon">!</span>캔바 처음이신 분 → 입문반 수강 후 참여 권장</div>
+      <div class="notice-item"><span class="ni-icon">!</span>캔바 어느 정도 써보신 분 → 입문반 VOD 구매 후 병행 가능</div>
+      <div class="notice-item"><span class="ni-icon">!</span>워크북 50페이지 이상 제작 → 입문반 내용 숙지가 필수예요</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="sec">
+    <div class="sec-title">수강료 안내</div>
+    <div class="price-sec">
+      <div class="price-row">
+        <div class="price-label">정상가</div>
+        <div class="price-val cross">200,000원</div>
+      </div>
+      <div class="price-row">
+        <div class="price-label">얼리버드 할인 (4/12 자정까지)</div>
+        <div class="price-val teal">- 30,000원</div>
+      </div>
+      <div class="price-row">
+        <div class="price-label">후기 페이백</div>
+        <div class="price-val teal">- 10,000원</div>
+      </div>
+      <div class="price-final-row">
+        <div class="pf-label">최종 혜택가</div>
+        <div class="pf-val">160,000원</div>
+      </div>
+    </div>
+    <div style="text-align:center; font-size:11px; color:#888; margin-top:8px;">얼리버드 + 후기 페이백 모두 적용 시 최대 혜택가</div>
+  </div>
+
+  <div class="cta-wrap">
+    <button class="cta-main" onclick="alert('신청 링크를 여기에 연결해 주세요!')">심화반 2기 신청하기 →</button>
+    <div class="cta-sub">@slp_irudassam · blog.naver.com/slp_iruda</div>
+  </div>
+
+</div>
+</body>
+</html>
